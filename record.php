@@ -1,4 +1,5 @@
 <?php
+
 header("Content-type:Application/json");
 $records = [];
 $dir = "Database";

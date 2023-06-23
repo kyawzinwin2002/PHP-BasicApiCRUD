@@ -38,6 +38,6 @@ if(!empty($fileName)){
 }else{
     //Error
     echo json_encode(["error" => "File is required!!"]);
-    header("HTTP/1.1 404 Not Found");
+    
 }
 
