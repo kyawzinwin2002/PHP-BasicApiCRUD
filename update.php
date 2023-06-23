@@ -3,8 +3,7 @@ header("Content-type:Application/json");
 $dir = "Database";
 $fileName = $_POST["name"];
 
-// print_r($_GET);
-// print_r(scandir($dir));
+
 $newWidth = null;
 $newBreadth = null;
 
@@ -30,8 +29,7 @@ if (file_exists($dir . "/" . $fileName)) {
     $newFile = [
         "width" => $newWidth . "ft",
         "breadth" => $newBreadth . "ft",
-        "area" => ($newWidth * $newBreadth) . "sqft",
-
+        "area" => ($newWidth * $newBreadth) . "sqft"
     ];
 
     //To update the file

@@ -2,15 +2,14 @@
 header("Content-type:Application/json");
 $dir = "Database";
 $fileName = $_GET["name"];
-// print_r($_GET);
-// print_r(scandir($dir));
+
 
 if($_SERVER["REQUEST_METHOD"] === "DELETE"){
     //To check get method params
     if(!empty($fileName)){
     //To check file exist
         if(file_exists($dir."/".$fileName)){
-            
+
             //MMS method
             unlink($dir."/".$fileName);
             echo json_encode(["message" => "Deleted Successfully!!"]);

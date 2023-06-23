@@ -4,7 +4,11 @@ header("Content-type:Application/json");
 
 $dir = "Database";
 $fileName = $_GET["name"];
+
+//To check existing of get method params
 if(!empty($fileName)){
+
+    //To check the existing of file in dir
     if(file_exists($dir."/".$fileName)){
 
         //MMS method and it is for no customization.
