@@ -10,9 +10,11 @@ if($_SERVER["REQUEST_METHOD"] === "DELETE"){
     if(!empty($fileName)){
     //To check file exist
         if(file_exists($dir."/".$fileName)){
+            
             //MMS method
             unlink($dir."/".$fileName);
             echo json_encode(["message" => "Deleted Successfully!!"]);
+
             //My First Try method (long)
             // foreach (scandir($dir) as $file) {
             //     if ($file != "." && $file != "..") {
